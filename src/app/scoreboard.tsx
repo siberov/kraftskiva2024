@@ -25,6 +25,8 @@ export default async function ScoreBoard() {
     }
   });
 
+  scores.sort((s1, s2) => s2.score - s1.score);
+
   return (
     <>
       <h2>Resultat</h2>
@@ -37,7 +39,7 @@ export default async function ScoreBoard() {
         </thead>
         <tbody>
           {scores.map((row) => (
-            <tr key={row.userId}>
+            <tr key={row.userId} className="border-">
               <td>{ids[row.userId] ?? "UNKNOWN USER"}</td>
               <td>{row.score}</td>
             </tr>

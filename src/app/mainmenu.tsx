@@ -57,7 +57,9 @@ export default function MainMenu() {
       {id && Object.keys(ids).find((e) => e === id) ? (
         <>
           {renderAdminPanel(id)}
-          <h1>Kräftskiva</h1>
+          <h1 className="text-4xl mb-4 font-bold text-orange-600">
+            Kräftskiva
+          </h1>
           <p>Välkommen, {ids[id]} </p>
           <form
             onSubmit={(e) => {
