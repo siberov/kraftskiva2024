@@ -5,10 +5,10 @@ import { ReactNode, useState } from "react";
 import { ids } from "./util";
 
 const urls = {
-  quiz: "/d791568a-08a8-4ef0-b125-bed4124f81c0",
-  musicQuiz: "/2cd7b76d-b410-4173-92ca-1e70de5bb21a",
-  reactionTest: "/f147f242-5760-48b5-ae8d-fc4eab640537",
-  findHat: "/a606d0c4-6146-406a-98bb-53a98ee7b124",
+  quiz: "/quiz-431",
+  musicQuiz: "/music-744",
+  reactionTest: "/reaction-198",
+  findHat: "/hat-610",
 };
 
 export default function MainMenu() {
@@ -46,7 +46,7 @@ export default function MainMenu() {
     }
     return (
       <>
-        <a href="/d7b1a390-0ee3-4681-90bc-0217f73f1eee">init db</a>
+        <a href="/db-init">init db</a>
       </>
     );
   }
