@@ -13,7 +13,6 @@ const urls = {
 
 export default function MainMenu() {
   const [input, setInput] = useState("");
-  const [wrongInput, setWrongInput] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -36,7 +35,7 @@ export default function MainMenu() {
         router.push(urls.findHat + `?id=${id}`);
         break;
       default:
-        setWrongInput(true);
+        alert("Fel! Kontrollera stavningen.");
         break;
     }
   }
@@ -58,7 +57,7 @@ export default function MainMenu() {
         <>
           {renderAdminPanel(id)}
           <h1 className="text-4xl mb-4 font-bold text-orange-600">
-            Kräftskiva
+            KrÃ⁠¶ftskiva
           </h1>
           <p>Välkommen, {ids[id]} </p>
           <form
@@ -72,9 +71,8 @@ export default function MainMenu() {
               onChange={(e) => setInput(e.target.value)}
               type="text"
             />
-            <button>the button</button>
+            <button>Ok</button>
           </form>
-          {wrongInput ? <p>Fel! Kontrollera att du stavat rätt.</p> : <></>}
         </>
       ) : (
         <> Du måste skanna QR-koden </>

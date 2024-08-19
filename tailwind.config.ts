@@ -7,8 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      pixelify: ["Pixelify Sans", "sans-serif"],
+    extend: {
+      fontFamily: {
+        pixel: ["Pixelated MS Sans Serif", "sans-serif"],
+      },
     },
   },
   plugins: [],

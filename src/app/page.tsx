@@ -1,6 +1,7 @@
 "use server";
 import MainMenu from "./mainmenu";
 import ScoreBoard from "./scoreboard";
+import "98.css";
 
 export default async function Home() {
   return (

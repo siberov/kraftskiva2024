@@ -30,22 +30,24 @@ export default async function ScoreBoard() {
   return (
     <>
       <h2>Resultat</h2>
-      <table>
-        <thead>
-          <tr>
-            <td>Spelare</td>
-            <td>Poäng</td>
-          </tr>
-        </thead>
-        <tbody>
-          {scores.map((row) => (
-            <tr key={row.userId} className="border-">
-              <td>{ids[row.userId] ?? "UNKNOWN USER"}</td>
-              <td>{row.score}</td>
+      <div className="sunken-panel">
+        <table className="w-full">
+          <thead>
+            <tr>
+              <td>Spelare</td>
+              <td>Poäng</td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {scores.map((row) => (
+              <tr key={row.userId} className="border-">
+                <td>{ids[row.userId] ?? "UNKNOWN USER"}</td>
+                <td>{row.score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
