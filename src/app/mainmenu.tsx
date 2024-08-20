@@ -6,6 +6,7 @@ import { ids } from "./util";
 
 const urls = {
   quiz: "/quiz-431",
+  quiz2: "/quiz-134",
   musicQuiz: "/music-744",
   reactionTest: "/reaction-198",
   findHat: "/hat-610",
@@ -15,9 +16,7 @@ export default function MainMenu() {
   const [input, setInput] = useState("");
   const router = useRouter();
   const searchParams = useSearchParams();
-
   const id = searchParams.get("id");
-  console.log("Id is ", id);
 
   function processInput(input: string) {
     const normalized = input.trim().toLowerCase();
@@ -33,6 +32,9 @@ export default function MainMenu() {
         break;
       case "paris":
         router.push(urls.findHat + `?id=${id}`);
+        break;
+      case "drake":
+        router.push(urls.quiz2 + `?id=${id}`);
         break;
       default:
         alert("Fel! Kontrollera stavningen.");

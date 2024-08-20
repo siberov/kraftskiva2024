@@ -8,7 +8,7 @@ type QuizOption = {
 };
 
 type Question = {
-  text: string;
+  text?: string;
   options: QuizOption[];
 };
 
@@ -31,7 +31,7 @@ export default function QuizTemplate({
     text,
     options,
   }: {
-    text: string;
+    text?: string;
     options: QuizOption[];
   }) {
     return (
