@@ -21,16 +21,16 @@ export default function FindHat() {
     "2875": "scentechno", // "Fabian",
     "5278": "doubledad", // "Pu",
     "3202": "multimom", // "Mimmi",
-    "2162": "fitbro3000", // "Fred",
+    "2162": "svejkstammis", // "Fred",
     "8202": "jr frontend", // "Martin",
-    "2342": "bratz?", // "Anna",
+    "2342": "brat", // "Anna",
     "3527": "mufasa", // "Rasmus",
   };
 
   function checkAnswer(e: Event) {
     e.preventDefault();
     if (answer == answers[id]) {
-      alert("Helt rätt!");
+      alert("Helt rätt! Nu får du snöra ihop din hatt och ta din plats.");
       router.push(`/submit?id=${id}&game=hat&score=1`);
     } else {
       alert("Fel svar!");
@@ -42,7 +42,7 @@ export default function FindHat() {
       <span className="fixed inset-0 w-screen h-screen bg-repeat bg-[url('/red.gif')] pointer-events-none -z-50" />
       <p className="m-4 mt-8 text-slate-200">Hitta hatt, {ids[id ?? ""]}</p>
       <Image
-        src={`/${ids[(id ?? "").toLowerCase()]}clue.png`}
+        src={`/${ids[(id ?? "").toLowerCase()]}clue.jpeg`}
         alt="En ledtråd"
         width={500}
         height={500}
